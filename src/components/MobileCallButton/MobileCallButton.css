@@ -1,0 +1,65 @@
+.mobile-call-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--teal), var(--light-blue));
+  color: var(--white);
+  border-radius: 50px;
+  box-shadow: var(--shadow-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.mobile-call-button:hover {
+  box-shadow: var(--shadow-xl);
+  color: var(--white);
+}
+
+.call-icon {
+  font-size: 1.25rem;
+  animation: ring 2s ease-in-out infinite;
+}
+
+.call-text {
+  font-size: 1rem;
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-15deg);
+  }
+  20%, 40% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-call-button {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-call-button {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .call-text {
+    font-size: 0.875rem;
+  }
+}
+

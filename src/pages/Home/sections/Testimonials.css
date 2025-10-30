@@ -1,0 +1,116 @@
+.testimonials {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: var(--spacing-2xl) auto 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.testimonials-slider {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.carousel-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background-color: var(--teal);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.carousel-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel-button-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .carousel-button-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .testimonials-carousel {
+    gap: 0;
+  }
+  
+  .testimonials-slider {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--border-gray);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background-color: var(--medium-gray);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background-color: var(--teal);
+  width: 30px;
+  border-radius: 6px;
+}
+
