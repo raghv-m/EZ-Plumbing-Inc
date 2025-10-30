@@ -39,7 +39,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`} role="banner">
       <div className="container">
         <div className="header-content">
           {/* Logo */}

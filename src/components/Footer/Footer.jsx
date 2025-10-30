@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="footer-main">
         <div className="container">
           <div className="footer-grid">

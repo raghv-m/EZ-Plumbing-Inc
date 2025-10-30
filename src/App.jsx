@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import MobileCallButton from './components/MobileCallButton/MobileCallButton';
+import SkipNav from './components/SkipNav/SkipNav';
 import Loading from './components/Loading/Loading';
 
 // Lazy load pages for better performance
@@ -25,9 +26,9 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="app">
-        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <SkipNav />
         <Header />
-        <main id="main-content">
+        <main id="main-content" role="main">
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
